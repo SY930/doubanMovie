@@ -1,0 +1,13 @@
+/* pages/home/detail/detail.wxss */
+@import '../search/search.wxss';
+@import '../move-item/move-item.wxss';
+@import '../star/star.wxss';
+.detail-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 648rpx;
+  margin: 40rpx 43rpx 0 59rpx;
+
+  /*750-648=102  51+8=59(8是多的margin值) 102-59*/
+}

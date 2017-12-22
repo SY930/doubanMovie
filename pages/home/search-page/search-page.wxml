@@ -1,0 +1,37 @@
+<!--pages/home/search-page/search-page.wxml-->
+<view>
+  <view class='search'>
+    <view class='search-bar'>
+      <input type='text' bindinput='valToSearch' bindblur='saveStorage' value='{{val}}'/>
+    </view>
+  </view>
+
+  <view>
+    <!--未搜索到内容 展示历史搜索  -->
+    <view wx:if="{{flag}}">
+      <view class='search-page-history'>
+        <text>历史记录</text>
+        <text bindtap='clearHistory'>清除历史</text>
+       
+      </view>
+       <block wx:for="{{historys}}">
+          <view class='search-page-history-content' bindtap='searchByHistory' data-history='{{item}}'>
+              <text>{{item}}</text>
+          </view>
+        </block>
+    </view>
+    <view class='search-page-movies' wx:else>
+      <!--搜索到的列表  -->
+      <block wx:for="{{movies}}" wx:for-item="movie">
+        <!--搜索到的结果  -->
+        <view class='search-page-container'>
+          <image src='{{movie.image}}' class='search-page-img'> </image>
+          <view class='search-page-contnet'>
+            <text>{{movie.title}}</text>
+            <text class='search-page-text'>{{movie.average}}/{{movie.year}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,9 @@
+<!--pages/home/home.wxml-->
+<import src="./search/search.wxml"/>
+<import src="./move-list/move-list.wxml"/>
+<template is="search"></template>
+
+<template is="move-list" data='{{...inTheaters}}'></template>
+<template is="move-list" data='{{...commingSoon}}'></template>
+<template is="move-list" data="{{...top250}}"></template>
+

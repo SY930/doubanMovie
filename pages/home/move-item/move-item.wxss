@@ -1,0 +1,13 @@
+.move-item-img{
+  width: 200rpx;
+  height: 285rpx
+}
+.move-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 16rpx
+}
+.move-item-title{
+  line-height: 65rpx
+}

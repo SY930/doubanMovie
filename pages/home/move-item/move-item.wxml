@@ -1,0 +1,8 @@
+<import src="../star/star.wxml"/>
+<template name="move-item">
+<view class='move-item' bindtap='bindToDetail' data-mid="{{id}}">
+    <image src='{{images}}' class='move-item-img'></image>
+    <text class='move-item-title'>{{title}}</text>
+    <template is="star" data="{{...rating}}"></template>
+ </view>
+</template>
